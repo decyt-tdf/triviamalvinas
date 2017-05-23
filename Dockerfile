@@ -1,4 +1,4 @@
-FROM node/alpine
+FROM node:alpine
 ADD . /triviamalvinas/
 WORKDIR /triviamalvinas/
 RUN npm install
