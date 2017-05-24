@@ -80,15 +80,18 @@
     });
   }
 function fb_publish() {
-     FB.ui(
-       {
-          method: 'share',
-          action_type: 'og.shares',
-          href: 'http://trivia.nuestrasmalvinas.org/',
-          title: 'My title',
-          picture: 'https://upload.wikimedia.org/wikipedia/en/3/30/Remote_graphics_software_logo.jpg',
-          description: 'My description'
-       },
+     FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.shares',
+        action_properties: JSON.stringify({
+            object : {
+               'og:url': 'https://trivia.nuestrasmalvinas.org',
+               'og:title': 'Trivia Malvinas',
+               'og:description': 'Es una trivia sobre mavlinas',
+               'og:image': 'https://upload.wikimedia.org/wikipedia/en/3/30/Remote_graphics_software_logo.jpg'
+            }
+          })
+      },
        function(response) {
          if (response && response.post_id) {
            alert('Post was published.');
