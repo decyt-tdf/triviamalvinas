@@ -82,13 +82,15 @@
 function fb_publish() {
      FB.ui(
        {
-     method: 'feed',
-     display: 'popup',
-     name: 'Trivia Malvinas',
-     link: 'http://trivia.nuestrasmalvinas.org',
-     picture: 'http://visionnacional.com/wp-content/uploads/2017/04/malvinas.jpg',
-     caption: 'PUNTAJE 1.000',
-     description: 'EL PUNTAJE DE LA TRIVIA ES DE 1.000',
+        method: 'stream.publish',
+        message: "Posted using FB.ui and picture.",
+        display: 'iframe',
+        caption: "Caption",
+        name: "Name",
+        picture: 'http://www.staffcreativa.pe/blog/wp-content/uploads/IMAGEN-4.png',
+        link: "http://www.google.com/",
+        description: "Description field",
+        actions: [{ name: 'action_links text!', link: 'http://www.google.com/' }
        },
        function(response) {
          if (response && response.post_id) {
