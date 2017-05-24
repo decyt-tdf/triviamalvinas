@@ -82,20 +82,13 @@
 function fb_publish() {
      FB.ui(
        {
-         method: 'stream.publish',
-         message: 'Este es el menesaje',
-         attachment: {
-           name: 'Trivia',
-           caption: 'Trivia caption.',
-           description: (
-             'Es una trivia sobre malvinas'
-           ),
-           href: 'https://ovnion.com'
-         },
-         action_links: [
-           { text: 'asdasdas', href: 'https://ovnion.com' }
-         ],
-         user_prompt_message: 'user mensaje'
+     method: 'feed',
+     name: 'Trivia Malvinas',
+     link: 'https://trivia.nuestrasmalvinas.org/',
+     picture: 'http://visionnacional.com/wp-content/uploads/2017/04/malvinas.jpg',
+     caption: 'PUNTAJE',
+     description: 'EL PUNTAJE DE LA TRIVIA ES DE 1.000',
+     message: 'mensaje Trivia'
        },
        function(response) {
          if (response && response.post_id) {
