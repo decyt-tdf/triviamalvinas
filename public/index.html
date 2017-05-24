@@ -83,12 +83,12 @@ function fb_publish() {
      FB.ui(
        {
      method: 'feed',
+     display: 'popup',
      name: 'Trivia Malvinas',
-     link: 'https://trivia.nuestrasmalvinas.org/',
+     link: 'http://trivia.nuestrasmalvinas.org',
      picture: 'http://visionnacional.com/wp-content/uploads/2017/04/malvinas.jpg',
-     caption: 'PUNTAJE',
+     caption: 'PUNTAJE 1.000',
      description: 'EL PUNTAJE DE LA TRIVIA ES DE 1.000',
-     message: 'mensaje Trivia'
        },
        function(response) {
          if (response && response.post_id) {
