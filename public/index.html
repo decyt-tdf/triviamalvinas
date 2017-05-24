@@ -79,6 +79,20 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+  function publishStory() {
+  FB.ui({
+    method: 'feed',
+    name: 'uno',
+    caption: 'dos',
+    description: 'tres',
+    link: 'https://www.prueba.com.ar',
+    picture: 'http://www.zehngames.com/wp-content/uploads/2015/01/seta-icono-new-super-mario-bros-wii-articulo-videojuegos-zehngames.png'
+  }, 
+  function(response) {
+    console.log('publishStory response: ', response);
+  });
+  return false;
+}
 </script>
 
 <!--
@@ -92,6 +106,8 @@
 
 <div id="status">
 </div>
+
+<a href="#" onClick="publishStory();" class="sendFeed"><br><font style="color:#FFF; text-decoration:none;padding-left:27px;">post to wall</font></a><br>
 
 </body>
 </html>
