@@ -82,14 +82,12 @@
 function fb_publish() {
      FB.ui(
        {
-        method: 'stream.publish',
-        message: "Posted using FB.ui and picture.",
-        display: 'iframe',
-        caption: "Caption",
-        name: "Name",
-        picture: 'http://www.staffcreativa.pe/blog/wp-content/uploads/IMAGEN-4.png',
-        link: "http://www.google.com/",
-        description: "Description field"
+          method: 'share',
+          action_type: 'og.shares',
+          href: 'http://trivia.nuestrasmalvinas.org/',
+          title: 'My title',
+          picture: 'https://upload.wikimedia.org/wikipedia/en/3/30/Remote_graphics_software_logo.jpg',
+          description: 'My description'
        },
        function(response) {
          if (response && response.post_id) {
